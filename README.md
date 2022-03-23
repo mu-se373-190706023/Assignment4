@@ -1,6 +1,6 @@
 ## Maltepe University Mobile-Programming-se373-01 Assignment 4
 
-### Birth Day picking Application
+### Birth Day picking Application with Java Android
 What used in this app is date picker dialog
     
 
