@@ -11,13 +11,15 @@ import android.widget.TextView;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
-    private TextView dateText;
+    TextView dateText;
+    TextView datePicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         dateText = findViewById(R.id.date_text);
+        datePicker = findViewById(R.id.datePicker);
 
         findViewById(R.id.show_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +42,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-        String date = "Your birth date is :\n" + "Day :" + dayOfMonth + "\nMonth :" + month + "\nYear :" + year;
+        String date = "Your birth date is :\n" + "Day :" + dayOfMonth + "\nMonth :" + (month+1) + "\nYear :" + year;
         dateText.setText(date);
+        datePicker.setText("DATE PICKER");
     }
 }
